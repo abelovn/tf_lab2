@@ -1,0 +1,533 @@
+PS C:\Users\Festus\Documents\EPAM\tf\tf-lab2> terraform apply  
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_db_instance.default will be created
+  + resource "aws_db_instance" "default" {
+      + address                               = (known after apply)
+      + allocated_storage                     = 10
+      + apply_immediately                     = (known after apply)
+      + arn                                   = (known after apply)
+      + auto_minor_version_upgrade            = true
+      + availability_zone                     = (known after apply)
+      + backup_retention_period               = (known after apply)
+      + backup_window                         = (known after apply)
+      + ca_cert_identifier                    = (known after apply)
+      + character_set_name                    = (known after apply)
+      + copy_tags_to_snapshot                 = false
+      + db_name                               = "mydb"
+      + db_subnet_group_name                  = (known after apply)
+      + delete_automated_backups              = true
+      + endpoint                              = (known after apply)
+      + engine                                = "mysql"
+      + engine_version                        = "8.0.20"
+      + engine_version_actual                 = (known after apply)
+      + final_snapshot_identifier             = "DELETEME"
+      + hosted_zone_id                        = (known after apply)
+      + id                                    = (known after apply)
+      + identifier                            = "mysqldb"
+      + identifier_prefix                     = (known after apply)
+      + instance_class                        = "db.t2.micro"
+      + kms_key_id                            = (known after apply)
+      + latest_restorable_time                = (known after apply)
+      + license_model                         = (known after apply)
+      + maintenance_window                    = (known after apply)
+      + monitoring_interval                   = 0
+      + monitoring_role_arn                   = (known after apply)
+      + multi_az                              = false
+      + name                                  = (known after apply)
+      + nchar_character_set_name              = (known after apply)
+      + option_group_name                     = (known after apply)
+      + parameter_group_name                  = (known after apply)
+      + password                              = (sensitive value)
+      + performance_insights_enabled          = false
+      + performance_insights_kms_key_id       = (known after apply)
+      + performance_insights_retention_period = (known after apply)
+      + port                                  = 3306
+      + publicly_accessible                   = false
+      + replica_mode                          = (known after apply)
+      + replicas                              = (known after apply)
+      + resource_id                           = (known after apply)
+      + skip_final_snapshot                   = true
+      + snapshot_identifier                   = (known after apply)
+      + status                                = (known after apply)
+      + storage_encrypted                     = false
+      + storage_type                          = "gp2"
+      + tags                                  = {
+          + "Owner" = "a.belov.n@gmail.com"
+        }
+      + tags_all                              = {
+          + "Owner" = "a.belov.n@gmail.com"
+        }
+      + timezone                              = (known after apply)
+      + username                              = "dbadmin"
+      + vpc_security_group_ids                = (known after apply)
+    }
+
+  # aws_instance.nginx will be created
+  + resource "aws_instance" "nginx" {
+      + ami                                  = "ami-0c02fb55956c7d316"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = (known after apply)
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t2.micro"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = (known after apply)
+      + monitoring                           = (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "Name"  = "nginx"
+          + "Owner" = "a.belov.n@gmail.com"
+        }
+      + tags_all                             = {
+          + "Name"  = "nginx"
+          + "Owner" = "a.belov.n@gmail.com"
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = "50375ef9f2dd50fd934a38433feab350f7228d9c"
+      + user_data_base64                     = (known after apply)
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
+
+      + capacity_reservation_specification {
+          + capacity_reservation_preference = (known after apply)
+
+          + capacity_reservation_target {
+              + capacity_reservation_id = (known after apply)
+            }
+        }
+
+      + ebs_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + snapshot_id           = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+
+      + enclave_options {
+          + enabled = (known after apply)
+        }
+
+      + ephemeral_block_device {
+          + device_name  = (known after apply)
+          + no_device    = (known after apply)
+          + virtual_name = (known after apply)
+        }
+
+      + metadata_options {
+          + http_endpoint               = (known after apply)
+          + http_put_response_hop_limit = (known after apply)
+          + http_tokens                 = (known after apply)
+          + instance_metadata_tags      = (known after apply)
+        }
+
+      + network_interface {
+          + delete_on_termination = (known after apply)
+          + device_index          = (known after apply)
+          + network_interface_id  = (known after apply)
+        }
+
+      + root_block_device {
+          + delete_on_termination = (known after apply)
+          + device_name           = (known after apply)
+          + encrypted             = (known after apply)
+          + iops                  = (known after apply)
+          + kms_key_id            = (known after apply)
+          + tags                  = (known after apply)
+          + throughput            = (known after apply)
+          + volume_id             = (known after apply)
+          + volume_size           = (known after apply)
+          + volume_type           = (known after apply)
+        }
+    }
+
+  # aws_security_group.sg-db will be created
+  + resource "aws_security_group" "sg-db" {
+      + arn                    = (known after apply)
+      + description            = "sg-db"
+      + egress                 = [
+          + {
+              + cidr_blocks      = [
+                  + "0.0.0.0/0",
+                ]
+              + description      = ""
+              + from_port        = 0
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "-1"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 0
+            },
+        ]
+      + id                     = (known after apply)
+      + ingress                = [
+          + {
+              + cidr_blocks      = [
+                  + "0.0.0.0/0",
+                ]
+              + description      = "http"
+              + from_port        = 3306
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "tcp"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 3306
+            },
+        ]
+      + name                   = "my-sg-db"
+      + name_prefix            = (known after apply)
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Owner" = "a.belov.n@gmail.com"
+        }
+      + tags_all               = {
+          + "Owner" = "a.belov.n@gmail.com"
+        }
+      + vpc_id                 = (known after apply)
+    }
+
+  # aws_security_group.sg-web will be created
+  + resource "aws_security_group" "sg-web" {
+      + arn                    = (known after apply)
+      + description            = "sg-web"
+      + egress                 = [
+          + {
+              + cidr_blocks      = [
+                  + "0.0.0.0/0",
+                ]
+              + description      = ""
+              + from_port        = 0
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "-1"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 0
+            },
+        ]
+      + id                     = (known after apply)
+      + ingress                = [
+          + {
+              + cidr_blocks      = [
+                  + "0.0.0.0/0",
+                ]
+              + description      = "http"
+              + from_port        = 80
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "tcp"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 80
+            },
+        ]
+      + name                   = "my-sg-web"
+      + name_prefix            = (known after apply)
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Owner" = "a.belov.n@gmail.com"
+        }
+      + tags_all               = {
+          + "Owner" = "a.belov.n@gmail.com"
+        }
+      + vpc_id                 = (known after apply)
+    }
+
+  # random_string.mysql_password will be created
+  + resource "random_string" "mysql_password" {
+      + id          = (known after apply)
+      + length      = 10
+      + lower       = true
+      + min_lower   = 0
+      + min_numeric = 0
+      + min_special = 0
+      + min_upper   = 0
+      + number      = true
+      + result      = (known after apply)
+      + special     = false
+      + upper       = true
+    }
+
+Plan: 5 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + ec2_address = (known after apply)
+  + rds_address = (known after apply)
+  + rds_creds   = (known after apply)
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+random_string.mysql_password: Creating...
+random_string.mysql_password: Creation complete after 0s [id=YoegBlSUeR]
+aws_security_group.sg-web: Creating...
+aws_security_group.sg-db: Creating...
+aws_security_group.sg-web: Creation complete after 5s [id=sg-08f5ee7047878f5f9]
+aws_instance.nginx: Creating...
+aws_security_group.sg-db: Creation complete after 7s [id=sg-0e9c35d15468b35fc]
+aws_db_instance.default: Creating...
+aws_instance.nginx: Still creating... [10s elapsed]
+aws_db_instance.default: Still creating... [10s elapsed]
+aws_instance.nginx: Still creating... [20s elapsed]
+aws_db_instance.default: Still creating... [20s elapsed]
+aws_instance.nginx: Still creating... [30s elapsed]
+aws_db_instance.default: Still creating... [30s elapsed]
+aws_instance.nginx: Creation complete after 34s [id=i-01ec8827089881dee]
+aws_db_instance.default: Still creating... [40s elapsed]
+aws_db_instance.default: Still creating... [50s elapsed]
+aws_db_instance.default: Still creating... [1m0s elapsed]
+aws_db_instance.default: Still creating... [1m10s elapsed]
+aws_db_instance.default: Still creating... [1m20s elapsed]
+aws_db_instance.default: Still creating... [1m30s elapsed]
+aws_db_instance.default: Still creating... [1m40s elapsed]
+aws_db_instance.default: Still creating... [1m50s elapsed]
+aws_db_instance.default: Still creating... [2m0s elapsed]
+aws_db_instance.default: Still creating... [2m40s elapsed]
+aws_db_instance.default: Still creating... [2m50s elapsed]
+aws_db_instance.default: Still creating... [3m0s elapsed]
+aws_db_instance.default: Still creating... [3m10s elapsed]
+aws_db_instance.default: Still creating... [3m20s elapsed]
+aws_db_instance.default: Still creating... [3m30s elapsed]
+aws_db_instance.default: Still creating... [3m40s elapsed]
+aws_db_instance.default: Still creating... [3m50s elapsed]
+aws_db_instance.default: Still creating... [4m0s elapsed]
+aws_db_instance.default: Still creating... [4m10s elapsed]
+aws_db_instance.default: Still creating... [4m20s elapsed]
+aws_db_instance.default: Still creating... [4m30s elapsed]
+aws_db_instance.default: Creation complete after 4m36s [id=mysqldb]
+
+Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
+
+
+ec2_address = "ec2-174-129-154-98.compute-1.amazonaws.com"
+rds_address = "mysqldb.cwqdd0fwdfjm.us-east-1.rds.amazonaws.com"
+rds_creds = "mydb, dbadmin : YoegBlSUeR"
+PS C:\Users\Festus\Documents\EPAM\tf\tf-lab2>
+PS C:\Users\Festus\Documents\EPAM\tf\tf-lab2>
+PS C:\Users\Festus\Documents\EPAM\tf\tf-lab2> ssh -i abelovn_keypair.pem ec2-user@ec2-174-129-154-98.compute-1.amazonaws.com
+ssh: connect to host ec2-174-129-154-98.compute-1.amazonaws.com port 22: Connection timed out
+PS C:\Users\Festus\Documents\EPAM\tf\tf-lab2> terraform plan
+random_string.mysql_password: Refreshing state... [id=YoegBlSUeR]
+aws_security_group.sg-web: Refreshing state... [id=sg-08f5ee7047878f5f9]
+aws_security_group.sg-db: Refreshing state... [id=sg-0e9c35d15468b35fc]
+aws_db_instance.default: Refreshing state... [id=mysqldb]
+aws_instance.nginx: Refreshing state... [id=i-01ec8827089881dee]
+
+Note: Objects have changed outside of Terraform
+
+Terraform detected the following changes made outside of Terraform since the last "terraform apply":
+
+  # aws_db_instance.default has changed
+  ~ resource "aws_db_instance" "default" {
+      + enabled_cloudwatch_logs_exports       = []
+        id                                    = "mysqldb"
+        name                                  = "mydb"
+      + security_group_names                  = []
+        tags                                  = {
+            "Owner" = "a.belov.n@gmail.com"
+        }
+        # (46 unchanged attributes hidden)
+    }
+
+
+Unless you have made equivalent changes to your configuration, or ignored the relevant attributes using ignore_changes, the following plan may include actions to undo or respond to these     
+changes.
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  ~ update in-place
+
+Terraform will perform the following actions:
+
+  # aws_security_group.sg-web will be updated in-place
+  ~ resource "aws_security_group" "sg-web" {
+        id                     = "sg-08f5ee7047878f5f9"
+      ~ ingress                = [
+          + {
+              + cidr_blocks      = [
+                  + "0.0.0.0/0",
+                ]
+              + description      = "Allow SSH inbound"
+              + from_port        = 22
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "tcp"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 22
+            },
+            # (1 unchanged element hidden)
+        ]
+        name                   = "my-sg-web"
+        tags                   = {
+            "Owner" = "a.belov.n@gmail.com"
+        }
+        # (7 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 1 to change, 0 to destroy.
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+
+Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
+PS C:\Users\Festus\Documents\EPAM\tf\tf-lab2> terraform apply
+random_string.mysql_password: Refreshing state... [id=YoegBlSUeR]
+aws_security_group.sg-db: Refreshing state... [id=sg-0e9c35d15468b35fc]
+aws_security_group.sg-web: Refreshing state... [id=sg-08f5ee7047878f5f9]
+aws_db_instance.default: Refreshing state... [id=mysqldb]
+aws_instance.nginx: Refreshing state... [id=i-01ec8827089881dee]
+
+Note: Objects have changed outside of Terraform
+
+Terraform detected the following changes made outside of Terraform since the last "terraform apply":
+
+  # aws_db_instance.default has changed
+  ~ resource "aws_db_instance" "default" {
+      + enabled_cloudwatch_logs_exports       = []       
+        id                                    = "mysqldb"
+        name                                  = "mydb"   
+      + security_group_names                  = []       
+        tags                                  = {
+            "Owner" = "a.belov.n@gmail.com"
+        }
+        # (46 unchanged attributes hidden)
+    }
+
+
+Unless you have made equivalent changes to your configuration, or ignored the relevant attributes using ignore_changes, the following plan may include actions to undo or respond to these     
+changes.
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  ~ update in-place
+
+Terraform will perform the following actions:
+
+  # aws_security_group.sg-web will be updated in-place
+  ~ resource "aws_security_group" "sg-web" {
+        id                     = "sg-08f5ee7047878f5f9"
+      ~ ingress                = [
+          + {
+              + cidr_blocks      = [
+                  + "0.0.0.0/0",
+                ]
+              + description      = "Allow SSH inbound"
+              + from_port        = 22
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "tcp"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 22
+            },
+            # (1 unchanged element hidden)
+        ]
+        name                   = "my-sg-web"
+        tags                   = {
+            "Owner" = "a.belov.n@gmail.com"
+        }
+        # (7 unchanged attributes hidden)
+    }
+
+Plan: 0 to add, 1 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_security_group.sg-web: Modifying... [id=sg-08f5ee7047878f5f9]
+
+
+
+ec2_address = "ec2-174-129-154-98.compute-1.amazonaws.com"
+rds_address = "mysqldb.cwqdd0fwdfjm.us-east-1.rds.amazonaws.com"
+rds_creds = "mydb, dbadmin : YoegBlSUeR"
+
+
+
+
+
+
+
+
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-172-31-95-39 ~]$ mysql -u dbadmin -pYoegBlSUeR -h mysqldb.cwqdd0fwdfjm.us-east-1.rds.amazonaws.com -P 3306 mydb
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 29
+Server version: 8.0.20 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [mydb]> \c
+MySQL [mydb]> \s
+--------------
+mysql  Ver 15.1 Distrib 5.5.68-MariaDB, for Linux (x86_64) using readline 5.1
+
+Connection id:29
+Current database:mydb
+Current user:dbadmin@172.31.95.39
+SSL:Not in use
+Current pager:stdout
+Using outfile:''
+Using delimiter:;
+Server:MySQL
+Server version:8.0.20 Source distribution
+Protocol version:10
+Connection:mysqldb.cwqdd0fwdfjm.us-east-1.rds.amazonaws.com via TCP/IP
+Server characterset:utf8mb4
+Db     characterset:utf8mb4
+Client characterset:utf8
+Conn.  characterset:utf8
+TCP port:3306
+Uptime:1 hour 34 min 22 sec
+
+Threads: 3  Questions: 12913  Slow queries: 0  Opens: 271  Flush tables: 3  Open tables: 174  Queries per second avg: 2.280
+--------------
+
+MySQL [mydb]> 
